@@ -1,11 +1,11 @@
 {
   "name": "factis-store-hexastore",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hexastore for factis",
   "main": "index.js",
   "dependencies": {
+    "adm-zip": "^0.4.7"
   },
-  "devDependencies": {  "jest-cli": "^0.4.13"},
   "scripts": {
     "test": "jest"
   },
@@ -29,8 +29,11 @@
   "bugs": {
     "url": "https://github.com/Factisio/factis-store-hexastore/issues"
   },
-  "jest" : {
-    "collectCoverage":"true"
+  "jest": {
+    "collectCoverage": "true"
   },
-  "homepage": "https://github.com/Factisio/factis-store-hexastore#readme"
+  "homepage": "https://github.com/Factisio/factis-store-hexastore#readme",
+  "devDependencies": {
+    "jest-cli": "^0.6.1"
+  }
 }
