@@ -1,10 +1,9 @@
 {
   "name": "factis-store-hexastore",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Hexastore for factis",
   "main": "index.js",
   "dependencies": {
-    "adm-zip": "^0.4.7"
   },
   "scripts": {
     "test": "jest"

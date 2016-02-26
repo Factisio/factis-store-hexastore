@@ -1,4 +1,3 @@
-var AZip = require('adm-zip');
 
 function Hexastore() {
   this.spo = {};
@@ -73,22 +72,6 @@ Hexastore.prototype.importJSON = function(dbname) {
   try {
     this.addSPO(JSON.parse(fs.readFileSync(dbname + ".json")));
   } catch (err) {}
-};
-
-// Export a database to ZIP file
-Hexastore.prototype.exportZip = function(dbname) {
-  // creating archives
-  var zip = new AZip();
-  // add file directly
-  zip.addFile("data.json", new Buffer(JSON.stringify(this.spo)), "hexastore database");
-  // or write everything to disk
-  zip.writeZip(dbname + ".zip");
-};
-// Import a database previously exported with exportZip
-Hexastore.prototype.importZip = function(dbname) {
-  var zip = new AZip(dbname + ".zip");
-  // outputs the content of somefolder/myfile.txt
-  this.addSPO(JSON.parse(zip.readAsText("data.json")));
 };
 
 
